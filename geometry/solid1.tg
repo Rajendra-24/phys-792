@@ -1,0 +1,44 @@
+:solid exphall BOX 10*m 10*m 10*m
+:solid base TUBE 0.5*m 1*m 2*m
+:solid base1 TUBS 0.5*m 1*m 2*m 0 360
+:solid base2 CONE 0.5*m 1*m 2*m 2.5*m 3*m
+:solid base3 SPHERE 4*m 5*m 0 360 0 360
+:solid base4 ORB 5*m
+:solid base5 BOX 5*m 5*m 5*m
+:solid base7 POLYCONE 0 360 4
+-2 3 3.5
+0.75 3 3.5
+1. 3. 3.75
+2. 3. 3.75
+:rotm R00 0 0 0
+:volu exphall_log exphall G4_AIR
+:volu base_log base G4_BRASS
+:volu base1_log base1 G4_BRASS
+:volu base2_log base2 G4_BRASS
+:volu base3_log base3 G4_BRASS
+:volu base4_log base4 G4_BRASS
+:volu base5_log base5 G4_STAINLESS-STEEL
+:volu base7_log base7 G4_BRASS
+
+:place base_log 1 exphall_log R00 2*m 8*m 0
+:place base1_log 1 exphall_log R00 2*m 8*m 0
+:place base2_log 1 exphall_log R00 2*m 2*m 0
+:place base3_log 1 exphall_log R00 2*m -2*m 0
+:place base4_log 1 exphall_log R00 0*m 6*m 0
+:place base4_log 2 exphall_log R00 0*m -6*m 0
+:place base5_log 1 exphall_log R00 0*m 0*m 8*m
+:place base5_log 2 exphall_log R00 0*m 0*m -8*m
+:place base5_log 3 exphall_log R00 0*m 8*m 0*m
+:place base5_log 4 exphall_log R00 0*m -8*m 0*m
+:place base7_log 1 exphall_log R00 2*m -4*m 0
+
+:color base_log 0.9 0.9 0
+:color base1_log 0.9 0.9 0
+:color base2_log 0 0.5 0.5
+:color base3_log 0 0.5 0.5
+:color base4_log 0 0.5 0
+:color base5_log 0 0.5 0
+:color base7_log 0 0.2 0.7
+
+:vis exphall_log OFF
+
